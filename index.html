@@ -4,24 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Realtime Chat App</title>
+    <title>Realtime Chat</title>
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <section class="chat__section">
         <div class="brand">
-            <img height="35" src="/logo.png" alt="">
+            <i class="fa fa-whatsapp fa-2x" aria-hidden="true" class="icon"></i>
             <h2>Chat Application</h2>
             <h3 id="user"></h3>
         </div>
         <div class="message__area"></div>
-        <div>
-            <textarea id="textarea" cols="30" rows="1" placeholder="Write a message..."></textarea>
+        <div style="display: flex;align-items: center;">
+            <textarea id="textarea" cols="15" rows="1" placeholder="Write a message..." style="flex: 1;"></textarea>
+            <button id="send">Send</button>
         </div>
     </section>
     <script src="/socket.io/socket.io.js"></script>
+    
     <script src="/client.js"></script>
+
+
 </body>
 
 </html>
