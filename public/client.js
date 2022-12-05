@@ -3,16 +3,21 @@ let name;
 let textarea = document.querySelector('#textarea')
 let messageArea = document.querySelector('.message__area')
 let user = document.getElementById('user')
+let send = document.getElementById('send')
 
 do {
     name = prompt('Please enter your name: ');
 } while(!name)
 
 user.innerHTML = name.toUpperCase()
-textarea.addEventListener('keyup', (e) => {
-    if(e.key === 'Enter') {
-        sendMessage(e.target.value)
-    }
+// textarea.addEventListener('keyup', (e) => {
+//     if(e.key === 'Enter') {
+//         sendMessage(e.target.value)
+//     }
+// })
+send.addEventListener('click', ()=> {
+    let message = textarea.value;
+    sendMessage(message)
 })
 
 function upload(files){
